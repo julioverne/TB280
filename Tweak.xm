@@ -51,6 +51,16 @@ static void fixFor280Count(id selfInstance)
 	%orig;
 	fixFor280Count(self);
 }
+- (void)layoutSubviews
+{
+	%orig;
+	fixFor280Count(self);
+}
+- (void)_updateView
+{
+	%orig;
+	fixFor280Count(self);
+}
 %end
 
 %hook PTHTweetbotPostController
